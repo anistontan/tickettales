@@ -391,34 +391,4 @@ footer {
 
 .form-status.error {
   color: red;
-}
-
-/* Download CSV Button Styles */
-.download-section {
-  margin-top: 40px;
-  border-top: 1px dotted #ccc;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.download-section p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: #666;
-  font-style: italic;
-}
-
-.download-button {
-  background-color: #ddd;
-  border: none;
-  border-radius: 25px;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: #ccc;
-  transform: scale(1.05);
 } 
