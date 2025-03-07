@@ -1,0 +1,424 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+  --pink-bg: #ffc0cb;
+  --cream-bg: #fff8dc;
+  --yellow-nav: #fff59d;
+  --blue-button: #b5d8ff;
+  --text-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--pink-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 95%;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+/* Header and Navigation */
+header {
+  text-align: center;
+  padding: 30px 20px 0;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--yellow-nav);
+  padding: 15px 0;
+}
+
+.main-nav li {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-nav a {
+  display: block;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  transform: scale(1.05);
+}
+
+/* Available Section */
+.available-section {
+  background-color: var(--cream-bg);
+  padding: 20px;
+}
+
+.available-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-item {
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto 30px;
+}
+
+.product-image {
+  border: 1px solid transparent;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.product-image img:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  background-color: var(--blue-button);
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.product-title h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Shop Now Button */
+.shop-now {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.shop-button {
+  background-color: var(--blue-button);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.shop-button:hover {
+  transform: scale(1.05);
+}
+
+/* Product Item Link Styles */
+.product-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Product Detail Section */
+.product-detail-section {
+  background-color: var(--cream-bg);
+  padding: 30px 20px;
+}
+
+.product-showcase {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-showcase .product-image {
+  flex: 1;
+  text-align: center;
+  border: 5px solid pink;
+}
+
+.product-showcase .product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  flex: 1;
+  text-align: center;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.product-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.product-info p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.buy-button {
+  background-color: var(--blue-button);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--cream-bg);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+.cta-button {
+  background-color: var(--blue-button);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .main-nav li {
+    padding: 5px 0;
+  }
+  
+  .product-showcase {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .product-info h2, 
+  .product-info h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-image img {
+    max-width: 100%;
+  }
+}
+
+/* Contact Form Styles */
+.contact-section {
+  background-color: var(--cream-bg);
+  padding: 40px 20px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.send-button {
+  background-color: var(--blue-button);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.send-button:hover {
+  transform: scale(1.05);
+}
+
+.form-status {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-status.success {
+  color: green;
+}
+
+.form-status.error {
+  color: red;
+}
+
+/* Download CSV Button Styles */
+.download-section {
+  margin-top: 40px;
+  border-top: 1px dotted #ccc;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.download-section p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+.download-button {
+  background-color: #ddd;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #ccc;
+  transform: scale(1.05);
+} 
