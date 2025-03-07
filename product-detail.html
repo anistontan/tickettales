@@ -25,8 +25,19 @@
         <main>
             <section id="product-detail" class="product-detail-section">
                 <div class="product-showcase">
-                    <div class="product-image">
-                        <img src="./src/assets/images/gracie-ticket.png" alt="Gracie Abrams Ticket">
+                    <div class="product-thumbnails">
+                        <div class="thumbnail active" data-image="gracie-front" data-ext="jpg">
+                            <img src="./src/assets/images/gracie-front.jpg" alt="Gracie Abrams Ticket Front">
+                        </div>
+                        <div class="thumbnail" data-image="gracie-back" data-ext="jpg">
+                            <img src="./src/assets/images/gracie-back.jpg" alt="Gracie Abrams Ticket Back">
+                        </div>
+                        <div class="thumbnail" data-image="gracie-ticket" data-ext="jpg">
+                            <img src="./src/assets/images/gracie-ticket.jpg" alt="Gracie Abrams Ticket Full">
+                        </div>
+                    </div>
+                    <div class="product-image-main">
+                        <img id="main-product-image" src="./src/assets/images/gracie-ticket.jpg" alt="Gracie Abrams Ticket">
                     </div>
                     <div class="product-info">
                         <h2>gracie abrams :</h2>
@@ -44,5 +55,30 @@
     </div>
 
     <script src="./src/assets/js/main.js"></script>
+    <script>
+        // Thumbnail switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-product-image');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Remove active class from all thumbnails
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+                    
+                    // Get the image name and extension from data attributes
+                    const imageName = this.getAttribute('data-image');
+                    const imageExt = this.getAttribute('data-ext');
+                    
+                    // Update main image source with correct file name and extension
+                    mainImage.src = `./src/assets/images/${imageName}.${imageExt}`;
+                    mainImage.alt = `Gracie Abrams Ticket ${imageName === 'gracie-front' ? 'Front' : 'Back'}`;
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
