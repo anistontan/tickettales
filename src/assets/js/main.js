@@ -155,37 +155,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Simple JavaScript for TicketTales Custom Prints
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Add hover effects to product items
+// Simple JavaScript for ticket tales website
+document.addEventListener('DOMContentLoaded', function() {
+  // Add hover effects to product items if they exist
   const productItems = document.querySelectorAll('.product-item');
   
-  productItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      item.style.transform = 'scale(1.02)';
-      item.style.transition = 'transform 0.3s ease';
-    });
-    
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = 'scale(1)';
-    });
-  });
-  
-  // Buy button functionality
-  const buyButton = document.querySelector('.buy-button');
-  if (buyButton) {
-    buyButton.addEventListener('click', () => {
-      alert('Thank you for your interest! This item has been added to your cart.');
+  if (productItems.length > 0) {
+    productItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.transform = 'scale(1.02)';
+        item.style.transition = 'transform 0.3s ease';
+      });
+      
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = 'scale(1)';
+      });
     });
   }
   
-  // Navigation smooth scrolling
-  const navLinks = document.querySelectorAll('.main-nav a');
+  // Smooth scrolling for navigation links
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
   
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      // Check if the link is an anchor link
       if (this.getAttribute('href').startsWith('#')) {
         e.preventDefault();
         
